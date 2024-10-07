@@ -3,71 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página Web</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-        }
-        section {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #333;
-            color: white;
-            position: relative;
-        }
-    </style>
+    <title>Talho Gemunde</title>
+    <link rel="stylesheet" href="css/main_style.css">
+    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/">
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo à Minha Página Web</h1>
-    </header>
+    <div class="conteiner">
+        <!--Main-->
+        <div class="main">
+            <div class="topbar">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Talho de Gemunde">
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Pesquisa Aqui!">
+                        <ion-icon name="search"></ion-icon>
+                    </label>
+                </div>
+                <div class="taggle">
+                    <ion-icon name="menu"></ion-icon>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
 
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Sobre</a>
-        <a href="#">Serviços</a>
-        <a href="#">Contato</a>
-    </nav>
-
-    <section>
-        <h2>Sobre Nós</h2>
-        <p>Esta é uma página web simples criada com HTML e CSS. Aqui você pode colocar informações sobre você, seus serviços, ou qualquer outro conteúdo que desejar.</p>
-    </section>
-
-    <section>
-        <h2>Nossos Serviços</h2>
-        <ul>
-            <li>Desenvolvimento Web</li>
-            <li>Design Gráfico</li>
-            <li>Consultoria de TI</li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Minha Empresa. Todos os direitos reservados.</p>
-    </footer>
+    <!--Script-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
