@@ -124,10 +124,12 @@ hr {
         padding-top: 30px; /* Espaçamento superior */
         transform: translateX(100%); /* Inicialmente escondido fora da tela */
         transition: transform 0.3s ease-in; /* Transição suave ao mostrar */
+        overflow-x: hidden;
     }
     .nav-list li {
         margin-left: 0; /* Remove margem à esquerda dos itens */
         opacity: 0; /* Inicialmente invisível */
+        overflow-x: hidden;
     }
     .mobile-menu {
         display: block; /* Mostra o menu móvel */
