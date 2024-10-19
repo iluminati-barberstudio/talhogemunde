@@ -1,77 +1,175 @@
-
-.topbar {
-    display: flex;
-    justify-content: space-between;
-    height: 60px;
-    align-items: center;
-    padding: 10px;
-    background-color: var(--blue1); 
+/* Estilização geral dos links */
+a {
+    color: var(--white); /* Cor do texto do link */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: 0.3s; /* Efeito de transição suave ao passar o mouse */
 }
 
-.logo
-{
-    position: relative;
-    top: 30px; 
+a:hover {
+    opacity: 0.7; /* Altera a opacidade do link ao passar o mouse */
+}
+
+/* Estilização da logo */
+.logo {
+    position: relative; /* Permite o posicionamento absoluto dos elementos dentro */
+    top: 25px; /* Ajusta a posição vertical da logo */
 }
 
 .logo img {
-    height: 120px;
+    height: 140px; /* Define a altura da imagem da logo */
 }
 
+/* Estilização do menu de navegação */
+nav {
+    display: flex; /* Usando flexbox para layout */
+    justify-content: space-around; /* Espaça os itens de forma igual ao redor */
+    align-items: center; /* Centraliza verticalmente os itens */
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif; /* Fonte do nav */
+    background: var(--blue1); /* Cor de fundo do nav */
+    height: 15vh; /* Altura do nav */
+    width: calc(100% - 80px); /* Largura do nav, subtraindo 80px */
+    padding-left: 40px; /* Espaçamento à esquerda */
+    padding-right: 40px; /* Espaçamento à direita */
+}
+
+/* Estilização do campo de busca */
 .search {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Usando flexbox para layout */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    margin: 0 10px; /* Adiciona uma margem horizontal de 10px */
+    flex-grow: 1; /* Faz com que o campo de busca ocupe o espaço restante */
 }
 
 .search label {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 400px; 
-    background-color: var(--blue2);
-    border-radius: 20px;
-    padding: 5px 10px;
+    position: relative; /* Para posicionar o ícone dentro do input */
+    width: 100%; /* Largura total do label */
 }
 
-.search ion-icon {
-    margin-right: 10px;
-    color: var(--white);
-}
-
+/* Estilização do input de busca */
 .search input {
-    border: none;
-    background: none;
-    outline: none;
-    flex-grow: 1;
-    padding: 5px;
+    height: 36px; /* Altura do input */
+    border: none; /* Remove borda padrão */
+    border-radius: 20px; /* Borda arredondada */
+    padding: 0 40px 0 30px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    width: calc(100% - 20px); /* Largura do input */
 }
 
-.search ::placeholder
-{
-    color: var(--white);
+/* Estilização do ícone da busca */
+.search ion-icon {
+    position: absolute; /* Para posicionar o ícone dentro do input */
+    left: 10px; /* Espaçamento à esquerda do ícone */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta a posição do ícone */
+    color: var(--blue2); /* Cor do ícone */
+    pointer-events: none; /* O ícone não interfere com cliques no input */
 }
 
-
-.taggle 
-{
-    position: relative;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5em;
-    cursor: pointer;
-    color: var(--white);
+/* Estilização da lista de navegação */
+.nav-list {
+    list-style: none; /* Remove marcadores da lista */
+    display: flex; /* Usando flexbox para layout */
 }
 
+.nav-list li {
+    letter-spacing: 3px; /* Espaçamento entre letras */
+    margin-left: 32px; /* Margem à esquerda de cada item */
+}
 
+/* Estilização do menu móvel */
+.mobile-menu {
+    display: none; /* Inicialmente escondido */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+}
+
+/* Estilização das linhas do menu móvel */
+.mobile-menu div {
+    width: 32px; /* Largura da linha do menu */
+    height: 2px; /* Altura da linha do menu */
+    background: var(--white); /* Cor da linha */
+    margin: 8px; /* Espaçamento entre as linhas */
+    transition: 0.3s; /* Transição suave para animações */
+}
+
+/* Estilização do hr */
 hr {
-    margin: 0;
-    background-color: var(--yellow); 
-    height: 2px; 
-    border: none; 
+    margin: 0; /* Remove margens padrão */
+    background-color: var(--yellow); /* Cor de fundo */
+    height: 2px; /* Altura do hr */
+    border: none; /* Remove a borda padrão */
 }
 
+
+/* Estilização para telas menores */
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden; /* Esconde overflow horizontal */
+    }
+    nav {
+        width: calc(100% - 20px); /* Largura do nav em telas menores */
+        padding-left: 10px; /* Ajusta o padding esquerdo */
+        padding-right: 10px; /* Ajusta o padding direito */
+        height: 10vh; /* Altura reduzida do nav */
+    }
+    .nav-list {
+        position: absolute; /* Posiciona a lista de navegação */
+        top: 7.5vh; /* Posição vertical */
+        right: 0; /* Alinha à direita */
+        width: 35vw; /* Largura do menu móvel */
+        height: 92vh; /* Altura do menu móvel */
+        background: var(--blue1); /* Cor de fundo do menu móvel */
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Centraliza os itens */
+        gap: 30px; /* Espaçamento entre os itens */
+        padding-top: 30px; /* Espaçamento superior */
+        transform: translateX(100%); /* Inicialmente escondido fora da tela */
+        transition: transform 0.3s ease-in; /* Transição suave ao mostrar */
+    }
+    .nav-list li {
+        margin-left: 0; /* Remove margem à esquerda dos itens */
+        opacity: 0; /* Inicialmente invisível */
+    }
+    .mobile-menu {
+        display: block; /* Mostra o menu móvel */
+    }
+
+    /* Estilização do input de busca em telas menores */
+    .search input {
+        width: calc(100% - 80px); /* Largura do input, subtraindo espaço para o ícone */
+        padding: 8px 40px; /* Ajusta o padding do input */
+    }
+    .logo {
+        position: relative;
+        top: 35px; /* Ajusta a posição vertical da logo */
+    }
+}
+
+/* Estilo do menu de navegação quando ativo */
+.nav-list.active {
+    transform: translateX(0); /* Mostra o menu quando ativo */
+}
+
+/* Animação de fade para os links do nav */
+@keyframes navLinkFade {
+    from {
+        opacity: 0; /* Inicialmente invisível */
+        transform: translateX(50px); /* Move para a direita */
+    }
+    to {
+        opacity: 1; /* Visível */
+        transform: translateX(0); /* Retorna à posição original */
+    }
+}
+
+/* Animações para o menu móvel quando ativo */
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px); /* Animação de cruz */
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0; /* Torna invisível */
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px); /* Animação de cruz */
+}

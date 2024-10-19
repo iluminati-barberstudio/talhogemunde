@@ -1,36 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talho Gemunde</title>
-    <link rel="stylesheet" href="css/main_style.css">
-    <link rel="stylesheet" href="css/index_style.css">
-    <link rel="stylesheet" href="css/">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talho de Gemund</title>
+    <link rel="stylesheet" href="./css/index_style.css" />
+    <link rel="stylesheet" href="./css/main_style.css">
 </head>
 <body>
-    <div class="conteiner">
-        <!--Main-->
-        <div class="main">
-            <div class="topbar">
-                <div class="logo">
-                    <img src="img/logo.png" alt="Talho de Gemunde">
-                </div>
-                <div class="search">
-                    <label>
-                        <input type="text" placeholder="Pesquisa Aqui!">
-                        <ion-icon name="search"></ion-icon>
-                    </label>
-                </div>
-                <div class="taggle">
-                    <ion-icon name="menu"></ion-icon>
-                </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Talho de Gemunde"></a>
             </div>
-            <hr>
-        </div>
-    </div>
-
-    <!--Script-->
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="Pesquisa Aqui!">
+                    <ion-icon name="search"></ion-icon>
+                </label>
+            </div>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#">Página Inicial</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contacte-nos</a></li>
+                <li><a href="#">Quem Somos</a></li>
+            </ul>         
+        </nav>
+        <hr> 
+    </header>
+    <script src="./js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
