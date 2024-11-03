@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar com Menu Hambúrguer</title>
+  <!-- Script para carregar os ícones do Ionic Framework -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Logotipo -->
+      <a href="#" class="logo">LOGO</a>
+
+      <!-- Botão do menu hambúrguer (visível no mobile) -->
+      <div id="menuButton" class="hamburger">
+        <ion-icon name="menu-sharp" id="menuIcon"></ion-icon>
+      </div>
+
+      <!-- Links da navbar (usado tanto para desktop quanto mobile) -->
+      <ul id="navLinks" class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
