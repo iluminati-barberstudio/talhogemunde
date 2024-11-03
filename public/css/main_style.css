@@ -1,15 +1,23 @@
-:root{
+/* ============================ */
+/* Variáveis de Cores           */
+/* ============================ */
+:root {
     --blue1: #043871;
     --blue2: #034BAA;
     --white: #FFFF;
     --yellow: #E3C62C;
-    --black1: #000000;
+    --black: #000000;
     --red: #B71E22;
 }
 
+/* ============================ */
+/* Reset Básico                 */
+/* ============================ */
 body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden; 
+    height: 100%;
 }
