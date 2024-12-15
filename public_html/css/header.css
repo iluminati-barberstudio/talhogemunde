@@ -1,0 +1,168 @@
+/* ============================ */
+/* Variáveis de Cores           */
+/* ============================ */
+:root {
+    --blue1: #043871;
+    --blue2: #034BAA;
+    --white: #FFFF;
+    --yellow: rgb(227, 198, 44);
+    --black: #000000;
+    --red: #B71E22;
+}
+
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+  
+/* Navbar */
+.navbar {
+    position: fixed; /* Fixa a navbar no topo da janela */
+    top: 0; /* Garante que fica no topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Ocupa toda a largura da janela */
+    z-index: 1000; /* Garante que fica acima de outros elementos */
+    box-sizing: border-box; /* Inclui padding/margens no cálculo do tamanho */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--blue1);
+    color: var(--white);
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(227, 198, 44, 0.8);
+}
+
+.logo {
+    position: relative;
+    top: 20px;
+    flex-shrink: 0;
+}
+
+ /* Logo */
+.logo img {
+    height: 120px;
+}
+  
+/* Links de navegação */
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.nav-links li {
+    margin: 0 15px;
+}
+  
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 22pt;
+    transition: color 0.3s ease;
+}
+  
+.nav-links a:hover {
+    color: var(--yellow);
+}
+  
+/* Ícones da Navbar */
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+  
+.nav-icons a {
+    margin-left: 15px;
+    font-size: 22pt;
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+  
+.nav-icons a:hover {
+    color: var(--yellow);
+}
+  
+/* Ícone de menu (hambúrguer) */
+.nav-icons .fa-bars {
+    display: none; /* Esconde o ícone em telas maiores */
+}
+
+/* Responsividade */
+
+@media (min-width: 780px) and (max-width: 1024px) {
+    /* Estilos específicos para tablets */
+    .nav-links a{
+        font-size: 17pt;
+    } 
+
+    .nav-icons a {
+        font-size: 17pt;
+    }
+
+    .navbar {
+        height: 50px;
+        padding: 12px 7px;
+    }
+
+    .logo img {
+        height: 130px;
+    }
+
+    .logo{
+        top: 25px;
+    }
+
+}
+
+@media (max-width: 779px) {
+    .navbar{
+        height: 51px;
+        padding: 10px 5px;
+    }
+    .nav-links {
+      display: none; /* Esconde os links de navegação em telas menores */
+      flex-direction: column;
+      position: absolute;
+      top: 50px; /* Ajuste para aparecer abaixo da navbar */
+      right: 0;
+      background-color: var(--blue1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 200px; /* Largura do menu dropdown */
+      border-radius: 0 0 5px 5px;
+      z-index: 1000;
+    }
+  
+    .nav-links.active {
+      display: flex; /* Mostra o menu quando ativado */
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+
+    .nav-icons a {
+        font-size: 17pt;
+    }
+    
+    .nav-links a{
+        font-size: 15pt;
+    } 
+  
+    .nav-icons .fa-bars {
+      display: block; /* Mostra o ícone em telas menores */
+      cursor: pointer;
+    }
+
+    .logo img {
+        height: 100px;
+    }
+
+    .logo{
+        top: 15px;
+    }
+}
+  

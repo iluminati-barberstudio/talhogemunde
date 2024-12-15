@@ -1,0 +1,16 @@
+/* Certifique-se de que o body ocupa toda a altura da janela */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ocupa pelo menos 100% da altura da janela */
+    display: flex;
+    flex-direction: column; /* Organiza os filhos verticalmente */
+}
+
+/* Footer sempre no final */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
