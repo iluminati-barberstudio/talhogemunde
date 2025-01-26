@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
-    <link rel="stylesheet" href="./css/produtos.css">
+    <link rel="stylesheet" href="../css/produtos.css">
 </head>
 <body>
     <main>
@@ -21,7 +21,7 @@
             </section>
             <section class="produtos-lista">
                 <article class="produto">
-                    <img src="./img/produto_1.webp" alt="Produto 1">
+                    <img src="../img/produto_1.webp" alt="Produto 1">
                     <h2>Carne de Porco</h2>
                     <p>Descrição breve: Carne suculenta e fresca.</p>
                     <p><strong>Preço:</strong> <span class="preco-original">€12.00</span> <span class="preco-promocao">€10.00</span></p>
@@ -93,5 +93,6 @@
             </section>
         </main>
     </main>
+    <script src="./js/filtro.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
 }
 
 .produto {
+    max-width: 300px;
     display: flex;                /* Ativa o Flexbox */
     flex-direction: column;       /* Coloca os elementos em coluna */
     justify-content: space-between; /* Alinha o conteúdo e o botão */
